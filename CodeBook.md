@@ -41,12 +41,12 @@ More information about the experiment and all raw data could be found in:
 * "UCI HAR Dataset/features_info.txt": Shows information about the variables in the raw data(features). 
 
 ##Creating the tidy datafile
-Aspects of the tidy data is provided in the [README]() file.
+Aspects of the tidy data is provided in the [README](https://github.com/andrius87/Getting_and_Cleaning_Data_Coursera/blob/master/README.md) file.
 
 ###Guide to create the tidy data file
 1. Open R-studio.
 2. Make sure you have the following packages installed: *dlyr*, *tidyr*.
-3. In the Console window run the line: source(*run_analysis.R*). [Link to the file]()
+3. In the Console window run the line: source("run_analysis.R"). [Link to the file](https://github.com/andrius87/Getting_and_Cleaning_Data_Coursera/blob/master/run_analysis.R)
 4. The output (tidy data set) is stored in your working directory named *tidy_data_set_as_per_README.txt*.
 
 ###Getting, cleaning, summarizing of the data
@@ -60,7 +60,7 @@ Aspects of the tidy data is provided in the [README]() file.
 * making molten data set,
 * decomposing variable names into separate columns and making them more clear and readable.
 
-The detailed explanation of above steps is in the [README]() file.
+The detailed explanation of above steps is in the [README](https://github.com/andrius87/Getting_and_Cleaning_Data_Coursera/blob/master/README.md) file.
  
 ##Description of the variables in the tiny_data_set_as_per_README file
 * The dimension of the data set: 5940 obs. of 9 variables.
