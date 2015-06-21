@@ -1,14 +1,14 @@
-# Getting_and_Cleaning_Data_Coursera
-This is the repository for the course project of the Getting and Cleaning Data course at Coursera.
-
 ---
 title: "Course Project's README file, making a tidy data set"
 author: "Andrius Dalinkevicius"
 date: "2015-06-20"
 ---
+
+# Getting_and_Cleaning_Data_Coursera
+This is the repository for the course project of the Getting and Cleaning Data course at Coursera.
  
 ##Description
-This is the README file of the project to make a tidy data set of the "Human Activity Recognition Using Smartphones Dataset" experiment. The file includes some aspects of tidy data set and detailed explanation of the [script]() for carrying out the transformation.
+This is the README file of the project to make a tidy data set of the "Human Activity Recognition Using Smartphones Dataset" experiment. The file includes some aspects of tidy data set and detailed explanation of the [script](https://github.com/andrius87/Getting_and_Cleaning_Data_Coursera/blob/master/run_analysis.R) for carrying out the transformation.
 
 ##Tidy data definition
 According to the [article "Tidy Data"](http://vita.had.co.nz/papers/tidy-data.pdf) of Hadley Wickham, the tidy data should NOT have the following problems:
@@ -24,13 +24,13 @@ The raw data of this project contains above problems. So fixing them makes the r
 3. Descriptive variable headings and values.
 
 ##Code for tidying the raw data
-Here is the detailed explanation of the [script]() to carry out a data tidying. The code is structured in some steps: *downloading data*, *getting data*, *step 1: merging*, *step 2: mean and std*, *step 3: activities, subjects*, *step 4: variable names*, *step 5: tidy data set*.
+Here is the detailed explanation of the [script](https://github.com/andrius87/Getting_and_Cleaning_Data_Coursera/blob/master/run_analysis.R) to carry out a data tidying. The code is structured in some steps: *downloading data*, *getting data*, *step 1: merging*, *step 2: mean and std*, *step 3: activities, subjects*, *step 4: variable names*, *step 5: tidy data set*.
 
 ###Downloading data
 This part of the code is for downloading the data using a url.
 
 ###Getting data
-This part of the code is for reading the files from the source. The *list.files* object contains all file names. Not all of them are needed to complete the task. The needed files is listed on the [CodeBook]().
+This part of the code is for reading the files from the source. The *list.files* object contains all file names. Not all of them are needed to complete the task. The needed files is listed on the [CodeBook](https://github.com/andrius87/Getting_and_Cleaning_Data_Coursera/blob/master/CodeBook.md).
 
 ###Step 1: merging
 This part of the code represents the first step of the task: merging test and training data sets(*X_test* and *X_train*). As the number of columns of these objects are equal, I assume that variables(columns) match between these two data frames. So *rbind()* function is used.
@@ -53,7 +53,7 @@ The following steps are required to make the data to be tidy:
 
 2. The *dt2* table is not tidy, because column headers are values(e.g., *tBodyAcc-mean()-X*), not variable names. As such it is needed to turn columns into rows. That creates molten data set with 4 columns: *subject*, *activity*, *variable*, *value*.
 
-3. The molten data set is almost tidy, but  multiple variables are stored in one column. So the *variable* column is separated into 6 columns(see [CodeBook]() for more details]): *signal*, *estimate*, *axis*,
+3. The molten data set is almost tidy, but  multiple variables are stored in one column. So the *variable* column is separated into 6 columns(see [CodeBook](https://github.com/andrius87/Getting_and_Cleaning_Data_Coursera/blob/master/CodeBook.md) for more details]): *signal*, *estimate*, *axis*,
 *domain*, *device* and *jerk*. Also, descriptive variable names are made.
 
 4. The *estimate* column contains two variables, *mean* and *std*, in rows. So the data is casted to make those variable to be in columns. The data set is now **tidy** according to features stated in the  *Tidy data definition* section.
